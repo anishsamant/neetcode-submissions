@@ -1,13 +1,16 @@
 class Solution {
-    public boolean hasDuplicate(int[] nums) {
-        HashSet<Integer> mySet = new HashSet<>();
-        for (int num : nums) {
-            if (!mySet.add(num)) {
-                return true;
-            } 
+    /**
+     * @param {number[]} nums
+     * @return {boolean}
+     */
+    hasDuplicate(nums) {
+        let mySet = new Set();
+        for (let num of nums) {
+            mySet.add(num);
         }
 
-        return false;
+        return nums.length != mySet.size;
     }
 }
+
 
