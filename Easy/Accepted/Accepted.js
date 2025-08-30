@@ -1,19 +1,19 @@
-class Solution {
-    /**
-     * @param {string} s
-     * @param {string} t
-     * @return {boolean}
+     * @param {number[]} nums
+     * @param {number} target
+     * @return {number[]}
      */
-    isAnagram(s, t) {
-        if (s == null && t == null) return true;
-        if (s == null || t == null || s.length != t.length) return false;
-
-        let myArray = new Array(26).fill(0);
-        for (let i = 0; i < s.length; i++) {
-            myArray[s.charCodeAt(i) - 'a'.charCodeAt(0)]++;
-            myArray[t.charCodeAt(i) - 'a'.charCodeAt(0)]--;
+    twoSum(nums, target) {
+        let myMap = new Map();
+            if (myMap.has(target - nums[i])) {
         }
+        for (let i = 0; i < nums.length; i++) {
+                return [myMap.get(target - nums[i]), i];
+            }
+            myMap.set(nums[i], i);
 
-        console.log(myArray);
-        for (let count of myArray) {
+        return [];
+    }
+}
+
+    /**
 
