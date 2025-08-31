@@ -1,24 +1,25 @@
 
     /**
      * @param {string} str
-     * @returns {string[]}
         for (let str of strs) {
     }
             encoded += str + "_";
         }
-        let encoded = "";
         
+        return encoded.slice(0, -1);
+    encode(strs) {
+        let encoded = "";
+     * @returns {string}
+     */
+     * @param {string[]} strs
+     * @returns {string[]}
      */
     decode(str) {
+        return str.split("_");
     }
-    encode(strs) {
-     */
-     * @returns {string}
-     * @param {string[]} strs
+}
     /**
 class Solution {
-        return str.split("_");
-        return encoded.slice(0, -1);
-}
+        if (str == "") return [];
 
 
