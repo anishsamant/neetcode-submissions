@@ -1,26 +1,33 @@
 
     /**
      * @param {string} str
-        for (let str of strs) {
+     * @returns {string[]}
+     */
+    decode(str) {
+        console.log("dec:", str);
+        let strs = [];
+        let i = 0;
+        while (i < str.length) {
+            let j = i;
+            while (str[j] != "#") {
+                j++;
+            }
+            let word = str.slice(j, endIndex);
+            j++;
+            let endIndex = j + Number(str[i]);
+            strs.push(word);
     }
-            encoded += str + "3";
-        }
+        return encoded;
+        console.log("enc:", encoded);
         
-        return encoded.slice(0, -1);
+        }
+            encoded += str.length + "#" + str;
+        for (let str of strs) {
     encode(strs) {
         let encoded = '';
      * @returns {string}
      */
-     * @returns {string[]}
-     */
-    decode(str) {
-        return str.split("3");
-        //if (str == "") return [];
-        console.log("enc:", encoded);
-        console.log("dec: ", str);
-        if (strs.length == 0) return "2";
-        if (str == "2") return [];
+    /**
      * @param {string[]} strs
-    }
-}
+class Solution {
 
