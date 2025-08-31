@@ -16,4 +16,18 @@ class Solution {
         }
 
         int[] res = new int[k];
+        int count = 0;
+        for (int i = freq.size() - 1; i > 0 && count < k; i--) {
+            for (int val : freq.get(i)) {
+                res[count++] = val;
+                if (count == k) {
+                    return res;
+                }
+            }
+        }
+
+        return res;
+    }
+}
+
 
