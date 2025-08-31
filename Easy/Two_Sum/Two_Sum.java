@@ -8,9 +8,9 @@ class Solution {
             myMap.put(nums[i], i);
         }
 
+        // default return
         return new int[2];
     }
 }
-        // default return
 
 
