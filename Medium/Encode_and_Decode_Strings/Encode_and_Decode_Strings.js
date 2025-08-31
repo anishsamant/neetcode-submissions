@@ -1,3 +1,7 @@
+class Solution {
+    /**
+     * @param {string[]} strs
+     * @returns {string}
      */
     encode(strs) {
         let encoded = '';
@@ -28,8 +32,4 @@
             i = endIndex;
         }
 
-     * @param {string[]} strs
-     * @returns {string}
-class Solution {
-    /**
 
