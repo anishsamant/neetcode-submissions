@@ -14,17 +14,16 @@
                 j++;
             }
             j++;
+        
+            let l = parseInt(str.slice(i, j));
             let endIndex = j + l;
             let word = str.slice(j, endIndex);
             strs.push(word);
             i = endIndex;
         }
 
-        }
-        
         return strs;
-        let encoded = '';
-        for (let str of strs) {
-            encoded += str.length + "#" + str;
-            let l = parseInt(str.slice(i, j));
+    }
+}
+
 
