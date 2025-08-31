@@ -1,3 +1,4 @@
+    groupAnagrams(strs) {
         let res = new Map();
         for (let str of strs) {
             let count = new Array(26).fill(0);
@@ -10,15 +11,10 @@
             }
             res.get(key).push(str);
         }
-
      */
-    groupAnagrams(strs) {
-     * @param {string[]} strs
-     * @return {string[][]}
-        return Array.from(res.values()); // return list of list of string
+
+        return Array.from(res.values());
     }
 }
 
-    /**
-class Solution {
 
