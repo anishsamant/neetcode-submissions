@@ -13,7 +13,7 @@ class Solution {
             myMap.get(key).add(s);
         }
 
-        return new ArrayList<>(myMap.values());
+        return new ArrayList<>(myMap.values());  // return list of list of string
     }
 }
 
