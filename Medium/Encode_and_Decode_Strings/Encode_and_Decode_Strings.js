@@ -8,7 +8,7 @@
         
         return encoded.slice(0, -1);
     encode(strs) {
-        let encoded = "";
+        let encoded = '';
      * @returns {string}
      */
      * @param {string[]} strs
@@ -17,9 +17,10 @@
     decode(str) {
         return str.split("_");
     }
-}
     /**
-class Solution {
-        if (str == "") return [];
+        //if (str == "") return [];
+        console.log("enc:", encoded);
+        console.log("dec: ", str);
+}
 
 
