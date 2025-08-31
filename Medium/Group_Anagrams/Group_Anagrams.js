@@ -6,15 +6,21 @@
             if (!res.has(key)) {
                 res.set(key,[]);
             }
-
             let value = res.get(key);
             value.push(str);
+        for (let str of strs) {
+        let res = new Map();
+     */
+    groupAnagrams(strs) {
+     * @param {string[]} strs
+     * @return {string[][]}
+class Solution {
+    /**
             res.set(key,  value);
         }
+
         return Array.from(res.values());
     }
 }
-        for (let str of strs) {
-        let res = new Map();
 
 
