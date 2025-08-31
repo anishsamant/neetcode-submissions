@@ -1,7 +1,4 @@
-    /**
-     * @param {number[]} nums
-     * @param {number} k
-     */
+class Solution {
     topKFrequent(nums, k) {
         let myMap = new Map();
         let freq = new Array(nums.length + 1);
@@ -30,5 +27,4 @@
     }
 }
 
-class Solution {
 
