@@ -1,3 +1,7 @@
+    /**
+     * @param {number[]} nums
+     * @param {number} k
+     */
     topKFrequent(nums, k) {
         let myMap = new Map();
         let freq = new Array(nums.length + 1);
@@ -22,14 +26,9 @@
             }
         }
 
-     * @param {number[]} nums
-     * @param {number} k
-     * @return {number[]}
-     */
         return res;
     }
 }
-    /**
-class Solution {
 
+class Solution {
 
