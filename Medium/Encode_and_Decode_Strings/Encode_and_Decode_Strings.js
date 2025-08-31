@@ -1,10 +1,10 @@
-class Solution {
+        
+        return encoded;
+    }
+
     /**
-     * @param {string[]} strs
-     * @returns {string}
+     * @param {string} str
+     * @returns {string[]}
      */
-    encode(strs) {
-        let encoded = '';
-        for (let str of strs) {
-            encoded += str.length + "#" + str;
-        }
+    decode(str) {
+        let strs = [];
