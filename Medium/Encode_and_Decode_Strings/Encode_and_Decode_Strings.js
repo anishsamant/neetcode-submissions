@@ -14,7 +14,7 @@
                 j++;
             }
             j++;
-            let endIndex = j + parseInt(str[i]);
+            let endIndex = j + l;
             let word = str.slice(j, endIndex);
             strs.push(word);
             i = endIndex;
@@ -26,5 +26,5 @@
         let encoded = '';
         for (let str of strs) {
             encoded += str.length + "#" + str;
-    }
+            let l = parseInt(str.slice(i, j));
 
