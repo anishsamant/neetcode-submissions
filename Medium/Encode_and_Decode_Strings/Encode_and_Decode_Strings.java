@@ -1,29 +1,31 @@
-    public String encode(List<String> strs) {
-    }
+class Solution {
 
-    public List<String> decode(String str) {
-        return ans;
-    }
+    public String encode(List<String> strs) {
+        String encoded = "";
         for (String s : strs) {
             encoded += s.length() + "#" + s;
         }
-        String encoded = "";
 
         return encoded;
+    }
+
+    public List<String> decode(String str) {
         int i = 0;  
-            int j = i;
-        }
-            while (str.charAt(j) != '#') {
+        List<String> ans = new ArrayList<>();  
         while (i < str.length()) {
+            int j = i;
+            while (str.charAt(j) != '#') {
                 j++;
             }
             int l = Integer.parseInt(str.substring(i, j));
             j++;
-            String word = str.substring(j, endIndex);
             int endIndex = j + l;
+            String word = str.substring(j, endIndex);
             ans.add(word);
-        List<String> ans = new ArrayList<>();  
             i = endIndex;
+        }
+        return ans;
+    }
 }
 
 
