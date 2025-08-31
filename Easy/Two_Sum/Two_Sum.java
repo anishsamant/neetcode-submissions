@@ -1,6 +1,5 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        int[] ans = new int[2];
         Map<Integer, Integer> myMap = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             if (myMap.containsKey(target - nums[i])) {
@@ -9,7 +8,7 @@ class Solution {
             myMap.put(nums[i], i);
         }
 
-        return ans;
+        return new int[2];
     }
 }
 
