@@ -13,9 +13,8 @@
             while (str[j] !== "#") {
                 j++;
             }
-            j++;
-        
             let l = parseInt(str.slice(i, j));
+        
             let endIndex = j + l;
             let word = str.slice(j, endIndex);
             strs.push(word);
@@ -24,6 +23,7 @@
 
         return strs;
     }
+        }
+            j++;
 }
-
 
