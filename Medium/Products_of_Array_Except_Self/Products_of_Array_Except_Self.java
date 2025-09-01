@@ -1,7 +1,6 @@
 class Solution {
     public int[] productExceptSelf(int[] nums) {
         int[] res = new int[nums.length];
-    }
         res[0] = 1;
 
         for (int i = 1; i < nums.length; i++) {
@@ -9,13 +8,14 @@ class Solution {
         }
 
         int postfix = 1;
+        int[] ans = new int[nums.length];
         for (int i = nums.length - 1; i >= 0; i--) {
             ans[i] = res[i] * postfix;
-        }
-        int[] ans = new int[nums.length];
             postfix *= nums[i];
+        }
 
         return ans;
+    }
 }  
 
 
