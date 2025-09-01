@@ -1,31 +1,20 @@
-     * @return {number[]}
-     */
-    productExceptSelf(nums) {
-        for (let num of nums) {
-            product *= num;
+
+        product = 1;
+        for (let i = nums.length - 1; i >=0; i--) {
+            suffixProduct[i] = product;
+            product *= nums[i];
+        let suffixProduct = [];
+        }
+        console.log(suffixProduct);
+
+        console.log(prefixProduct);
+        let ans = [];
+        for (let i = 0; i < nums.length; i++) {
+            prefixProduct[i] = product;
+            product *= nums[i];
         }
         let product = 1;
-
-        let ans = [];
-        for (let num of nums) {
-        }
-
-            if (num == 0) ans.push(productWithoutZero);
-            else ans.push(product/num);
-        return ans;
-        let productWithoutZero = 1;
-            if (num != 0) {
-                productWithoutZero *= num;
-            }
-    /**
-     * @param {number[]} nums
-class Solution {
-    }
-        let countZero = 0;
-                countZero++;
-        if (countZero > 1) {
-            productWithoutZero = 0;
-        }
-}
-
+        for (let i = 0; i < nums.length; i++) {
+    productExceptSelf(nums) {
+        let prefixProduct = [];
 
