@@ -20,7 +20,7 @@
 </ul>
 <br>
 <br>
-<details class="hint-accordion" open="">  
+<details class="hint-accordion">  
     <summary>Recommended Time &amp; Space Complexity</summary>
     <p style="font-size: 17px;">
     You should aim for a solution as good or better than <code class="hljs language-stylus" style="font-size: 14.5px;">O(n)</code> time and <code class="hljs language-stylus" style="font-size: 14.5px;">O(n)</code> space, where <code class="hljs language-ebnf" style="font-size: 14.5px;">n</code> is the size of the input array.
@@ -28,7 +28,7 @@
 </details>
 
 <br>
-<details class="hint-accordion" open="">  
+<details class="hint-accordion">  
     <summary>Hint 1</summary>
     <p style="font-size: 17px;">
     A brute-force solution would be to iterate through the array with index <code class="hljs language-css" style="font-size: 14.5px;">i</code> and compute the product of the array except for that index element. This would be an <code class="hljs language-stylus" style="font-size: 14.5px;">O(n^2)</code> solution. Can you think of a better way?
@@ -36,7 +36,7 @@
 </details>
 
 <br>
-<details class="hint-accordion" open="">  
+<details class="hint-accordion">  
     <summary>Hint 2</summary>
     <p style="font-size: 17px;">
     Is there a way to avoid the repeated work? Maybe we can store the results of the repeated work in an array.
@@ -44,7 +44,7 @@
 </details>
 
 <br>
-<details class="hint-accordion" open="">  
+<details class="hint-accordion">  
     <summary>Hint 3</summary>
     <p style="font-size: 17px;">
     We can use the prefix and suffix technique. First, we iterate from left to right and store the prefix products for each index in a prefix array, excluding the current index's number. Then, we iterate from right to left and store the suffix products for each index in a suffix array, also excluding the current index's number. Can you figure out the solution from here? 
@@ -52,7 +52,7 @@
 </details>
 
 <br>
-<details class="hint-accordion" open="">  
+<details class="hint-accordion">  
     <summary>Hint 4</summary>
     <p style="font-size: 17px;">
     We can use the stored prefix and suffix products to compute the result array by iterating through the array and simply multiplying the prefix and suffix products at each index.
