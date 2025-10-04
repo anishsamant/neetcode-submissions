@@ -1,13 +1,11 @@
 class Solution {
     public int maxProduct(int[] nums) {
-        int maxProdSub = nums[0];
-        int currProd = 1;
+        int currMax = 1, currMin = 1, maxProdSub = nums[0];
         for (int num : nums) {
-            currProd *= num;
-            if (currProd < num) {
-                currProd = num;
-            }
-            maxProdSub = Math.max(maxProdSub, currProd);
+            int tmp = num * currMax;
+            currMax = Math.max(Math.max(tmp, num * currMin), num);
+            currMin = Math.min(Math.min(tmp, num * currMin), num);
+            maxProdSub = Math.max(maxProdSub, currMax);
         }
 
         return maxProdSub;
