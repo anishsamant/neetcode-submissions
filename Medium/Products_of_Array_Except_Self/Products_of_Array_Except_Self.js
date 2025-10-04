@@ -1,4 +1,8 @@
-
+class Solution {
+    /**
+     * @param {number[]} nums
+     * @return {number[]}
+     */
     productExceptSelf(nums) {
         let product = 1;
         let productSkippingZero = 1;
@@ -18,16 +22,12 @@
 
         let ans = [];
         for (let i = 0; i < nums.length; i++) {
-            if (nums[i] == 0) {
-                ans[i] = productSkippingZero;
-            } else {
-                ans[i] = product / nums[i];
-            }
+            if (nums[i] == 0) ans[i] = productSkippingZero;
+            else ans[i] = product / nums[i];
         }
 
         return ans;
     }
 }
-class Solution {
 
 
