@@ -5,13 +5,12 @@ class Solution {
         for (int num : nums) {
             sum += num;
             if (sum < num) {
-                maxSubSum = Math.max(maxSubSum, num);
                 sum = num;
             }
             maxSubSum = Math.max(maxSubSum, sum);
         }
 
-        return Math.max(maxSubSum, sum);
+        return maxSubSum;
     }
 }
 
