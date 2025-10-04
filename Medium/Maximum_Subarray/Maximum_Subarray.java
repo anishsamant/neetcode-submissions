@@ -8,6 +8,7 @@ class Solution {
                 maxSubSum = Math.max(maxSubSum, num);
                 sum = num;
             }
+            maxSubSum = Math.max(maxSubSum, sum);
         }
 
         return Math.max(maxSubSum, sum);
