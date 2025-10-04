@@ -1,32 +1,33 @@
-class Solution {
-    /**
-     * @param {number[]} nums
-     * @return {number[]}
-     */
-    productExceptSelf(nums) {
-        let prefixProduct = [];
-        let product = 1;
-        for (let i = 0; i < nums.length; i++) {
-            prefixProduct[i] = product;
-            product *= nums[i];
-        }
-        console.log(prefixProduct);
 
-        let suffixProduct = [];
-        product = 1;
-        for (let i = nums.length - 1; i >=0; i--) {
-            suffixProduct[i] = product;
-            product *= nums[i];
+    productExceptSelf(nums) {
+        let product = 1;
+        let productSkippingZero = 1;
+        let zeroCounter = 0;
+        for (let num of nums) {
+            product *= num;
+            if (num == 0) {
+                zeroCounter++;
+            } else {
+                productSkippingZero *= num;
+            }
         }
-        console.log(suffixProduct);
+
+        if (zeroCounter > 1) {
+            return Array(nums.length).fill(0);
+        }
 
         let ans = [];
         for (let i = 0; i < nums.length; i++) {
-            ans.push(prefixProduct[i] * suffixProduct[i]);
+            if (nums[i] == 0) {
+                ans[i] = productSkippingZero;
+            } else {
+                ans[i] = product / nums[i];
+            }
         }
-        
+
         return ans;
     }
 }
+class Solution {
 
 
