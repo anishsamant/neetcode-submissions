@@ -1,3 +1,5 @@
+/**
+ * public class ListNode {
  *     int val;
  *     ListNode next;
  *     ListNode() {}
@@ -26,9 +28,7 @@ class Solution {
         }
 
         return res.next;
- * public class ListNode {
     }
 }
-/**
 
 
