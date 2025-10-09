@@ -1,3 +1,4 @@
+/**
  * class ListNode {
  *     constructor(val = 0, next = null) {
  *         this.val = val;
@@ -9,7 +10,6 @@ class Solution {
     /**
      * @param {ListNode} list1
      * @param {ListNode} list2
-     * @return {ListNode}
      */
     mergeTwoLists(list1, list2) {
         let temp = new ListNode(0);
@@ -30,6 +30,5 @@ class Solution {
         return temp.next;
     }
 }
-/**
 
 
