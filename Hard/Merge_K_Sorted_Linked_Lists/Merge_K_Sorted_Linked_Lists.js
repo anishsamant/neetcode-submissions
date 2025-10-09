@@ -1,3 +1,10 @@
+ /** class ListNode {
+ *     constructor(val = 0, next = null) {
+ *         this.val = val;
+ *         this.next = next;
+ *     }
+ * } */
+class Solution {
     mergeKLists(lists) {
         if (lists.length == 0) return null;
         for (let i = 1; i < lists.length; i++) {
@@ -17,18 +24,11 @@
                 list2 = list2.next;
             }
             curr = curr.next;
-class Solution {
- *     }
- * } */
- *         this.val = val;
- *         this.next = next;
         }
         if (list1 != null) curr.next = list1;
         else curr.next = list2;
         return node.next;
     }
- *     constructor(val = 0, next = null) {
- /** class ListNode {
 }
 
 
